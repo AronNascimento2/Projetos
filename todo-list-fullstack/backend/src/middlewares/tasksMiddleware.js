@@ -15,12 +15,12 @@ const validateTitle = (request, response, next) => {
 const validateFieldStatus = (request, response, next) => {
   const { body } = request;
 
-  if (body.staus === undefined) {
-    response.status(400).json({ message: 'The field "staus" is required' });
+  if (body.status === undefined) {
+    response.status(400).json({ message: 'The field "status" is required' });
   }
 
-  if (body.staus === "") {
-    response.status(400).json({ message: "staus cannot be empty" });
+  if (body.status === "") {
+    response.status(400).json({ message: "status cannot be empty" });
   }
 
   next();
